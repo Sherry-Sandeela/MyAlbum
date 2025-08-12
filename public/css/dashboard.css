@@ -1,0 +1,153 @@
+
+/* Body & Background */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(
+      135deg,
+      rgba(255, 140, 0, 0.3) 0%,
+      rgba(255, 165, 0, 0.4) 25%,
+      rgba(255, 69, 0, 0.5) 50%,
+      rgba(220, 20, 60, 0.6) 75%,
+      rgba(139, 0, 139, 0.7) 100%
+    ),
+    #f8f9fa; /* fallback */
+  min-height: 100vh;
+}
+
+/* Navbar */
+header.navbar {
+  background-color: rgba(139, 0, 139, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+header .navbar-brand {
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+}
+
+header span.text-white {
+  font-weight: 600;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Hero Section */
+main > section.py-5 {
+  color: white;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
+}
+
+main > section.py-5 h1.fw-light {
+  font-weight: 900 !important;
+  font-size: 4rem;
+  letter-spacing: -1.5px;
+}
+
+main > section.py-5 p.lead {
+  font-size: 1.25rem;
+  opacity: 0.9;
+}
+
+/* Upload form */
+form.d-flex {
+  margin-top: 1.5rem;
+}
+
+form.d-flex input[type="file"] {
+  border-radius: 0.5rem;
+  border: none;
+  padding: 0.375rem 0.75rem;
+}
+
+form.d-flex button {
+  border-radius: 0 0.5rem 0.5rem 0;
+  padding: 0.45rem 1.25rem;
+  background-color: #8B5CF6;
+  border: none;
+  color: white;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+form.d-flex button:hover {
+  background-color: #7c4de0;
+}
+
+/* Album cards */
+.album.py-5.bg-light {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  padding: 3rem 1.5rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3rem;
+}
+
+.card {
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(139, 0, 139, 0.4);
+}
+
+.card-img-top {
+  border-radius: 12px 12px 0 0;
+  object-fit: cover;
+  height: 225px;
+}
+
+.btn-outline-secondary {
+  color: #8B5CF6;
+  border-color: #8B5CF6;
+  font-weight: 600;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #8B5CF6;
+  color: white;
+  border-color: #7c4de0;
+}
+
+.btn-outline-danger {
+  border-color: #dc3545;
+  font-weight: 600;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Modal */
+.modal-content {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.modal-header {
+  background: #8B5CF6;
+  color: white;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.modal-body img {
+  border-radius: 12px;
+  max-height: 70vh;
+  object-fit: contain;
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main > section.py-5 h1.fw-light {
+    font-size: 2.5rem;
+  }
+  .album.py-5.bg-light {
+    padding: 2rem 1rem;
+  }
+}
