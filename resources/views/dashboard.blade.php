@@ -92,6 +92,8 @@
                 </div>
                 <div class="modal-body text-center">
                     <img src="{{ asset('storage/' . $photo->image_path) }}" class="img-fluid" alt="Image">
+
+                    <a href="{{asset('storage/' . $photo->image_path)}}" download="{{$photo->photo_title ?? 'photo'}}.jpg" class="btn btn-success m-2 ">Download</a>
                 </div>
             </div>
         </div>

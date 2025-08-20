@@ -5,13 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
-
+use Illuminate\Support\Facades\Auth;
 
 
 class UserController extends Controller
 {
     public function register(Request $request)
     {
+        
         
         //validation krna
         $request->validate([
@@ -46,9 +47,11 @@ class UserController extends Controller
 
     public function login(Request $request)
     {
+         $credentials = $request->only('email', 'password'); 
         //validation comming data
-        if (empty($request->email) || empty($request->password)) {
-        return back()->with('error', 'Email and password are required');
+        if (Auth::attempt($credentials)) {
+        $request->session()->regenerate();
+        return redirect()->intended('dashboard');
     }
 
         //user same email sy find

@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 </head>
 <body>
-  <form action="{{ route('check.email') }}" method="POST">
+  <form action="{{ route('forget.send') }}" method="POST">
     @csrf
     <h2>Forget Password</h2>
 
@@ -20,7 +20,7 @@
       required
     /><br />
 
-    <button type="submit">Submit</button>
+    <button type="submit">Send code</button>
 
     <p class="login-link">
       <a href="{{ route('login') }}">Back to Login</a>
