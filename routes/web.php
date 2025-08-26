@@ -7,6 +7,7 @@ use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\ForgetpasswordController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ResetpasswordController;
 
 Route::get('/', function () {
@@ -29,6 +30,9 @@ Route::post('/forget-password',[ForgetpasswordController::class,'sendResetCode']
 // expire kybd gain code bhjna 
 Route::get('/resend-code', [ForgetpasswordController::class, 'resendCode'])->name('reset.code.resend');
 
+// mailreply
+Route::get('/email',[EmailController::class,'index'])->name('email.index');
+Route::post('/email/send',[EmailController::class,'send'])->name('email.send');
 
 Route::get('/reset-code', [ForgetpasswordController::class, 'showCodeForm'])->name('reset.form');
 Route::post('/reset-code', [ForgetpasswordController::class, 'verifyCode'])->name('reset.code.verify');
